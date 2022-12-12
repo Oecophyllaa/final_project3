@@ -39,6 +39,32 @@ class Auth extends Controller
     }
   }
 
+  public function signup()
+  {
+    $data['title'] = 'Sign Up';
+    $this->view('templates/header_auth', $data);
+    $this->view('auth/register');
+    $this->view('templates/footer_auth');
+  }
+
+  public function regist_user()
+  {
+    // var_dump($_POST);
+    // die;
+    $pass = $_POST['pass'];
+    $passConf = $_POST['pass_conf'];
+
+    if ($pass === $passConf) {
+      $resp = $this->model('UserModel')->daftar($_POST);
+      var_dump($resp);
+      die;
+    } else {
+      Flasher::setFlash("Confirm Your Password", "error");
+      header("Location: " . BASEURL . "/auth/signup");
+      exit;
+    }
+  }
+
   public function signout()
   {
     unset($_SESSION['userdata']);

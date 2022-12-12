@@ -40,4 +40,16 @@ class UserModel
 
     return $this->db->single();
   }
+
+  public function daftar($input)
+  {
+    $query = "INSERT INTO user VALUES('',:email,:password,1)";
+
+    $this->db->query($query);
+    $this->db->bind('email', $input['email']);
+    $this->db->bind('password', $input['pass']);
+    $this->db->execute();
+
+    return $this->db->rowCount();
+  }
 }

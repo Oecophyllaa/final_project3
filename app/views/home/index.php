@@ -4,10 +4,9 @@
     <div class="row justify-content-between gy-5">
       <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
         <h2 data-aos="fade-up">Enjoy Your Healthy<br />Delicious Food</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+        <p data-aos="fade-up" data-aos-delay="100">Best cooks and best delivery guys all at your service. Hot tasty food will reach you in 20mins.</p>
         <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-          <a href="#book-a-table" class="btn-book-a-table">Book a Table</a>
-          <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          <a href="#menu" class="btn-book-a-table">Discover Menu</a>
         </div>
       </div>
       <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
@@ -61,7 +60,7 @@
       <div class="row gy-4">
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="why-box">
-            <h3>Why Choose Yummy?</h3>
+            <h3>Why Choose Enyokitchen?</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit Asperiores dolores sed et. Tenetur quia eos. Autem tempore
               quibusdam vel necessitatibus optio ad corporis.
@@ -77,27 +76,27 @@
           <div class="row gy-4">
             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
               <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                <i class="bi bi-clipboard-data"></i>
-                <h4>Corporis voluptates officia eiusmod</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <i class="bi bi-clipboard2-x"></i>
+                <h4>No Order Restrictions</h4>
+                <p>Order as much as you want and from any categories you want.</p>
               </div>
             </div>
             <!-- End Icon Box -->
 
             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
               <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                <i class="bi bi-gem"></i>
-                <h4>Ullamco laboris ladore pan</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Track Order Efficiently</h4>
+                <p>Track your order at all times from restaurant to your doorstep.</p>
               </div>
             </div>
             <!-- End Icon Box -->
 
             <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
               <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                <i class="bi bi-inboxes"></i>
-                <h4>Labore consequatur incidid dolore</h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                <i class="bi bi-truck"></i>
+                <h4>On Time Delivery</h4>
+                <p>We love serving you while the food is fresh and hot.</p>
               </div>
             </div>
             <!-- End Icon Box -->

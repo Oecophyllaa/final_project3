@@ -41,6 +41,12 @@
 
 <!-- Volt JS -->
 <script src="<?= BASEURL; ?>/js/volt.js"></script>
+
+<!-- JQuery -->
+<script src="<?= BASEURL; ?>/js/jquery.min.js"></script>
+
+<!-- My JS -->
+<script src="<?= BASEURL; ?>/js/script.js"></script>
 </body>
 
 </html>
