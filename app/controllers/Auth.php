@@ -55,9 +55,15 @@ class Auth extends Controller
     $passConf = $_POST['pass_conf'];
 
     if ($pass === $passConf) {
-      $resp = $this->model('UserModel')->daftar($_POST);
-      var_dump($resp);
-      die;
+      if ($this->model('UserModel')->daftar($_POST) > 0) {
+        Flasher::setFlash("Register Success", "success");
+        header("Location: " . BASEURL . "/auth");
+        exit;
+      } else {
+        Flasher::setFlash("Register Failed", "error");
+        header("Location: " . BASEURL . "/auth/signup");
+        exit;
+      }
     } else {
       Flasher::setFlash("Confirm Your Password", "error");
       header("Location: " . BASEURL . "/auth/signup");
