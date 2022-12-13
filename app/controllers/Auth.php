@@ -16,24 +16,19 @@ class Auth extends Controller
 
   public function signin()
   {
-    if ($this->model('UserModel')->isUserExist($_POST['email']) > 0) {
-      if ($this->model('UserModel')->validateUser($_POST) > 0) {
-        $data['user'] = $this->model('UserModel')->getUser($_POST['email']);
-        $_SESSION['userdata'] = [
-          "isLogin" => true,
-          "userId" => $data['user']['id_detailuser'],
-          "userName" => $data['user']['first_name'],
-        ];
-        Flasher::setFlash('Login Success!!', 'success');
-        header("Location: " . BASEURL . "/admin/profile/" . $_SESSION['userdata']['userId']);
-        exit;
-      } else {
-        Flasher::setFlash('EMAIL / PASS INCORRECT!!', 'error');
-        header("Location: " . BASEURL . "/auth");
-        exit;
-      }
+    if ($this->model('UserModel')->signin($_POST)) {
+      $data['user'] = $this->model('UserModel')->getUser($_POST['email']);
+      $_SESSION['userdata'] = [
+        "isLogin" => true,
+        "userId" => $data['user']['id_detailuser'],
+        "userName" => $data['user']['first_name'],
+      ];
+
+      Flasher::setFlash("Signin Success", "success");
+      header("Location: " . BASEURL . "/admin/profile/" . $_SESSION['userdata']['userId']);
+      exit;
     } else {
-      Flasher::setFlash('USER NOT FOUND!!', 'error');
+      Flasher::setFlash("Signin Failed", "error");
       header("Location: " . BASEURL . "/auth");
       exit;
     }
@@ -49,8 +44,6 @@ class Auth extends Controller
 
   public function regist_user()
   {
-    // var_dump($_POST);
-    // die;
     $pass = $_POST['pass'];
     $passConf = $_POST['pass_conf'];
 

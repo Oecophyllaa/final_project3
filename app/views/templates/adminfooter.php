@@ -44,7 +44,7 @@
   const elem = document.querySelector('input[name="birthday"]');
   const datepicker = new Datepicker(elem, {
     format: {
-      Default: 'dd/mm/yyy'
+      Default: 'dd/mm/yyyy'
     }
   })
 </script>

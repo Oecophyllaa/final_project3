@@ -2,7 +2,8 @@
   <div class="col-12 col-xl-8">
     <div class="card card-body border-0 shadow mb-4">
       <h2 class="h5 mb-4">General information</h2>
-      <form>
+      <form action="<?= BASEURL; ?>/admin/update_profile" method="POST">
+        <input type="hidden" name="id" value="<?= $data['user']['id_detailuser']; ?>">
         <div class="row">
           <div class="col-md-6 mb-3">
             <div>
@@ -61,17 +62,19 @@
           <div class="col-sm-7 mb-3">
             <div class="form-group">
               <label for="city">City</label>
-              <input class="form-control" id="city" type="text" value="<?= $data['user']['city']; ?>" required>
+              <input class="form-control" name="city" id="city" type="text" value="<?= $data['user']['city']; ?>" required>
             </div>
           </div>
           <div class="col-sm-5 mb-3">
             <div class="form-group">
               <label for="country">Country</label>
-              <input class="form-control" id="country" type="text" value="<?= $data['user']['country']; ?>" required>
+              <input class="form-control" name="country" id="country" type="text" value="<?= $data['user']['country']; ?>" required>
             </div>
           </div>
         </div>
-        <div class="mt-0"><button class="btn btn-gray-800 mt-2 animate-up-2" type="submit">Save all</button></div>
+        <div class="mt-0">
+          <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit">Save all</button>
+        </div>
       </form>
     </div>
     <div class="card card-body border-0 shadow mb-4 mb-xl-0">
