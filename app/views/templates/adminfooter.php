@@ -40,23 +40,12 @@
 
 <!-- Datepicker -->
 <script src="<?= BASEURL; ?>/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
-<script>
-  const elem = document.querySelector('input[name="birthday"]');
-  const datepicker = new Datepicker(elem, {
-    format: {
-      Default: 'dd/mm/yyyy'
-    }
-  })
-</script>
 
 <!-- Sweet Alerts 2 -->
 <script src="<?= BASEURL; ?>/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
 <!-- Moment JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-
-<!-- Vanilla JS Datepicker -->
-<script src="<?= BASEURL; ?>/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
 
 <!-- Notyf -->
 <script src="<?= BASEURL; ?>/vendor/notyf/notyf.min.js"></script>

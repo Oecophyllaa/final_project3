@@ -40,9 +40,9 @@ class Admin extends Controller
 
   public function update_profile()
   {
-    // $raw_date = str_replace('/', '-', $_POST['birthday']);
-    // var_dump(date('Y-m-d', strtotime($raw_date)));
-    // die;
+    $raw_date = str_replace('/', '-', $_POST['birthday']);
+    var_dump(date('Y-m-d', strtotime($raw_date)));
+    die;
     if ($this->model('UserModel')->updateUser($_POST) > 0) {
       Flasher::setFlash('Profile Updated', 'success');
       header("Location: " . BASEURL . "/admin/profile/" . $_SESSION['userdata']['userId']);
