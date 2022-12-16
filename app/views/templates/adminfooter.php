@@ -38,9 +38,6 @@
 <script src="<?= BASEURL; ?>/vendor/chartist/dist/chartist.min.js"></script>
 <script src="<?= BASEURL; ?>/vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
 
-<!-- Datepicker -->
-<script src="<?= BASEURL; ?>/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
-
 <!-- Sweet Alerts 2 -->
 <script src="<?= BASEURL; ?>/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
 

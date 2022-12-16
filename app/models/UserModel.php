@@ -26,7 +26,7 @@ class UserModel
 
   public function getUser($data)
   {
-    $query = "SELECT *, DATE_FORMAT(birthday, '%d/%m/%Y') AS birthday FROM detail_user WHERE email=:email OR id_detailuser=:id ";
+    $query = "SELECT * FROM detail_user WHERE email=:email OR id_detailuser=:id ";
     $this->db->query($query);
     $this->db->bind('email', $data);
     $this->db->bind('id', $data);
