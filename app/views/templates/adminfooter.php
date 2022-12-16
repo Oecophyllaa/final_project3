@@ -57,12 +57,19 @@
 <!-- Volt JS -->
 <script src="<?= BASEURL; ?>/js/volt.js"></script>
 
-<!-- Modal Confirmation Delete -->
+<!-- JQuery -->
 <script src="<?= BASEURL; ?>/js/jquery.min.js"></script>
 <script>
+  // Modal Confirmation Box
   $('#destroyMenu').on('show.bs.modal', function(e) {
     $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
   });
+
+  // Filename
+  $('input#photo').change(function() {
+    filename = this.files[0].name;
+    $('#labelFile').text(filename);
+  })
 </script>
 </body>
 
