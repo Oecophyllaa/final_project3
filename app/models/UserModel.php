@@ -64,28 +64,15 @@ class UserModel
     return $this->db->rowCount();
   }
 
-  public function updatePP($input, $file)
+  public function updatePhoto($id, $filename)
   {
-    $id = $input['id'];
-    $file_name = $file['photo']['name'];
-    $file_temp = $file['photo']['tmp_name'];
-    $file_size = $file['photo']['size'];
-    $file_type = $file['photo']['type'];
-    $path = "C:/xampp/htdocs/final-project/public/img/uploads/profile/" . $file_name;
+    $query = "UPDATE detail_user SET photo=:photo WHERE id_detailuser=:id";
+    $this->db->query($query);
+    $this->db->bind('photo', $filename);
+    $this->db->bind('id', $id);
+    $this->db->execute();
 
-    if ($file_size < 5 * MB) {
-      if (move_uploaded_file($file_temp, $path)) {
-        $query = "UPDATE detail_user SET photo=:photo WHERE id_detailuser=:id";
-        $this->db->query($query);
-        $this->db->bind('photo', $path);
-        $this->db->bind('id', $id);
-        $this->db->execute();
-
-        return $this->db->rowCount();
-      }
-    } else {
-      return 101;
-    }
+    return $this->db->rowCount();
   }
 
   public function daftar($input)

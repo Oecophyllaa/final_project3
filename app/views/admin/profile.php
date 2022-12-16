@@ -116,7 +116,7 @@
         <div class="card shadow border-0 text-center p-0">
           <div class="profile-cover rounded-top" data-background="<?= BASEURL; ?>/img/profile-cover.jpg" style="background: url(&quot;<?= BASEURL; ?>/img/profile-cover.jpg&quot;);"></div>
           <div class="card-body pb-5">
-            <img src="<?= BASEURL; ?>/img/team/pp.jpg" class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
+            <img src="<?= BASEURL; ?>/img/uploads/profile/<?= $data['user']['photo']; ?>" class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
             <h4 class="h3"><?= $data['user']['first_name']; ?> <?= $data['user']['last_name']; ?></h4>
             <h5 class="fw-normal"><?= $data['user']['job']; ?></h5>
             <p class="text-gray mb-4"><?= $data['user']['city']; ?>, <?= $data['user']['country']; ?></p>
@@ -140,7 +140,7 @@
                 <input type="hidden" name="id" value="<?= $data['user']['id_detailuser']; ?>">
                 <div class="d-flex justify-content-xl-center ms-xl-3">
                   <div class="d-flex">
-                    <input type="file" name="photo" id="photo" required>
+                    <input type="file" name="photo" id="photo">
                     <div class="d-md-block text-left">
                       <div class="fw-normal text-dark mb-1">Choose Image</div>
                       <div class="text-gray small labelPhoto">
