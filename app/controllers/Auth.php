@@ -22,6 +22,7 @@ class Auth extends Controller
         "isLogin" => true,
         "userId" => $data['user']['id_detailuser'],
         "userName" => $data['user']['first_name'],
+        "userImg" => $data['user']['photo']
       ];
 
       Flasher::setFlash("Signin Success", "success");
