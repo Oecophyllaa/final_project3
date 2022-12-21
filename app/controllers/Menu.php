@@ -53,7 +53,45 @@ class Menu extends Controller
 
   public function store()
   {
-    if ($this->model('MenuModel')->storeMenu($_POST) > 0) {
+    // var_dump($_POST);
+    // var_dump($_FILES['gambar']);
+    // die;
+    $file_name = $_FILES['gambar']['name'];
+    $file_size = $_FILES['gambar']['size'];
+    $file_temp = $_FILES['gambar']['tmp_name'];
+    $file_errx = $_FILES['gambar']['error'];
+    $target_dir = "C:/xampp/htdocs/final-project/public/img/uploads/menu/";
+
+    if ($file_errx === 4) {
+      Flasher::setFlash('No File Uploaded', 'error');
+      header("Location: " . BASEURL . "/menu/create");
+      exit;
+    }
+
+    $valid_ext = ['jpg', 'jpeg', 'png'];
+    $photo_ext = explode('.', $file_name);
+    $photo_ext = strtolower(end($photo_ext));
+    if (!in_array($photo_ext, $valid_ext)) {
+      Flasher::setFlash('Must be JPG, JPEG, PNG', 'error');
+      header("Location: " . BASEURL . "/menu/create");
+      exit;
+    }
+
+    if ($file_size > 5 * MB) {
+      Flasher::setFlash('File size must less than 5MB', 'error');
+      header("Location: " . BASEURL . "/menu/create/");
+      exit;
+    }
+
+    if (file_exists($target_dir . $file_name)) {
+      Flasher::setFlash('File Already Exists', 'error');
+      header("Location: " . BASEURL . "/menu/create");
+      exit;
+    }
+
+    move_uploaded_file($file_temp, $target_dir . $file_name);
+
+    if ($this->model('MenuModel')->storeMenu($_POST, $file_name) > 0) {
       Flasher::setFlash('Menu berhasil ditambahkan.', 'success');
       header("Location: " . BASEURL . "/menu");
       exit;

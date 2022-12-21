@@ -19,24 +19,25 @@ class MenuModel
 
   public function getMenuById($id)
   {
-    $query = "SELECT menu.id_menu, menu.nama_menu, kategori.nama_kategori, jenis.nama_jenis, menu.deskripsi, menu.rating, menu.harga FROM ((menu INNER JOIN kategori ON menu.id_kategori = kategori.id_kategori) INNER JOIN jenis ON menu.id_jenis = jenis.id_jenis) WHERE menu.id_menu=:id";
+    $query = "SELECT menu.id_menu, menu.nama_menu, kategori.nama_kategori, jenis.nama_jenis, menu.deskripsi, menu.rating, menu.harga, menu.gambar FROM ((menu INNER JOIN kategori ON menu.id_kategori = kategori.id_kategori) INNER JOIN jenis ON menu.id_jenis = jenis.id_jenis) WHERE menu.id_menu=:id";
     $this->db->query($query);
     $this->db->bind('id', $id);
     return $this->db->single();
   }
 
-  public function storeMenu($data)
+  public function storeMenu($input, $img)
   {
-    $query = "INSERT INTO menu VALUES ('',:nama_menu,:id_kategori,:id_jenis,:deskripsi,:rating,:harga) ";
+    $query = "INSERT INTO menu VALUES ('',:nama_menu,:id_kategori,:id_jenis,:deskripsi,:rating,:harga,:gambar) ";
     $this->db->query($query);
-    $this->db->bind('nama_menu', $data['nama_menu']);
-    $this->db->bind('id_kategori', $data['id_kategori']);
-    $this->db->bind('id_jenis', $data['id_jenis']);
-    $this->db->bind('deskripsi', $data['deskripsi']);
-    $this->db->bind('rating', $data['rating']);
-    $this->db->bind('harga', $data['harga']);
-
+    $this->db->bind('nama_menu', $input['nama_menu']);
+    $this->db->bind('id_kategori', $input['id_kategori']);
+    $this->db->bind('id_jenis', $input['id_jenis']);
+    $this->db->bind('deskripsi', $input['deskripsi']);
+    $this->db->bind('rating', $input['rating']);
+    $this->db->bind('harga', $input['harga']);
+    $this->db->bind('gambar', $img);
     $this->db->execute();
+
     return $this->db->rowCount();
   }
 

@@ -29,7 +29,7 @@
       <div class="card-body">
         <div class="row d-block d-xl-flex align-items-center">
           <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
-            <img src="<?= BASEURL; ?>/img/menu/spaghetti.jpg" class="img-fluid" alt="ramen">
+            <img src="<?= BASEURL; ?>/img/uploads/menu/<?= $data['menu']['gambar']; ?>" class="img-fluid" alt="img-menu">
             <div class="d-sm-none">
               <h2 class="fw-extrabold h5"> Bounce Rate</h2>
               <h3 class="mb-1">50.88%</h3>

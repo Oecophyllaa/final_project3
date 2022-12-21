@@ -54,7 +54,7 @@
               <td><?= $menu['nama_jenis']; ?></td>
               <td class="text-wrap"><?= $menu['deskripsi']; ?></td>
               <td><?= $menu['rating']; ?></td>
-              <td><?= $menu['harga']; ?> K</td>
+              <td>Rp <?= $menu['harga']; ?></td>
               <td>
                 <!-- Detail -->
                 <a href="<?= BASEURL; ?>/menu/detail/<?= $menu['id_menu']; ?>" type="button" class="btn btn-info d-inline-flex align-items-center" title="Detail" data-bs-toggle="tooltip" data-bs-placement="top">
