@@ -51,15 +51,13 @@
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#chefs">Chefs</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <!-- .navbar -->
 
-      <a class="btn-book-a-table" href="#book-a-table">Order Now</a>
+      <a class="btn-book-a-table" href="https://api.whatsapp.com/send/?phone=6281234553088&text=Halo+Enyo+Kitchenette+saya+mau+order&type=phone_number&app_absent=0" target="blank">Order Now</a>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     </div>
