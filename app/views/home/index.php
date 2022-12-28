@@ -638,6 +638,9 @@
           <div class="col-xl-6 form-group">
             <input type="email" class="form-control" name="email" id="email" placeholder="Email Anda" required />
           </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="no_telp" id="no_telp" placeholder="Nomor Telpon" required />
+          </div>
         </div>
         <div class="form-group">
           <textarea class="form-control" name="pesan" rows="5" placeholder="Pesan" required></textarea>
