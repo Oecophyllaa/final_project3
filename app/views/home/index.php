@@ -113,32 +113,32 @@
       <div class="row gy-4">
         <div class="col-lg-3 col-md-6">
           <div class="stats-item text-center w-100 h-100">
+            <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Pelanggan</p>
+          </div>
+        </div>
+        <!-- End Stats Item -->
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item text-center w-100 h-100">
+            <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Menu</p>
+          </div>
+        </div>
+        <!-- End Stats Item -->
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item text-center w-100 h-100">
             <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Clients</p>
+            <p>Jam Pelayanan</p>
           </div>
         </div>
         <!-- End Stats Item -->
 
         <div class="col-lg-3 col-md-6">
           <div class="stats-item text-center w-100 h-100">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-        </div>
-        <!-- End Stats Item -->
-
-        <div class="col-lg-3 col-md-6">
-          <div class="stats-item text-center w-100 h-100">
-            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
-        </div>
-        <!-- End Stats Item -->
-
-        <div class="col-lg-3 col-md-6">
-          <div class="stats-item text-center w-100 h-100">
-            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Workers</p>
+            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Pekerja</p>
           </div>
         </div>
         <!-- End Stats Item -->
@@ -251,7 +251,7 @@
 
           <div class="row gy-5">
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-1.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Magnam Tiste</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$5.95</p>
@@ -259,7 +259,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-2.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Aut Luia</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$14.95</p>
@@ -267,7 +267,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-3.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-3.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Est Eligendi</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$8.95</p>
@@ -275,7 +275,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-4.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-4.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Eos Luibusdam</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$12.95</p>
@@ -283,7 +283,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-5.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-5.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Eos Luibusdam</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$12.95</p>
@@ -291,7 +291,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-6.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-6.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Laboriosam Direva</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$9.95</p>
@@ -309,7 +309,7 @@
 
           <div class="row gy-5">
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-1.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Magnam Tiste</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$5.95</p>
@@ -317,7 +317,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-2.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Aut Luia</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$14.95</p>
@@ -325,7 +325,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-3.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-3.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Est Eligendi</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$8.95</p>
@@ -333,7 +333,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-4.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-4.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Eos Luibusdam</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$12.95</p>
@@ -341,7 +341,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-5.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-5.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Eos Luibusdam</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$12.95</p>
@@ -349,7 +349,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-6.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-6.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Laboriosam Direva</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$9.95</p>
@@ -367,7 +367,7 @@
 
           <div class="row gy-5">
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-1.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Magnam Tiste</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$5.95</p>
@@ -375,7 +375,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-2.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-2.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Aut Luia</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$14.95</p>
@@ -383,7 +383,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-3.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-3.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Est Eligendi</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$8.95</p>
@@ -391,7 +391,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-4.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-4.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Eos Luibusdam</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$12.95</p>
@@ -399,7 +399,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-5.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-5.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Eos Luibusdam</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$12.95</p>
@@ -407,7 +407,7 @@
             <!-- Menu Item -->
 
             <div class="col-lg-4 menu-item">
-              <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt="" /></a>
+              <a href="<?= BASEURL; ?>/img/menu/menu-item-6.png" class="glightbox"><img src="<?= BASEURL; ?>/img/menu/menu-item-6.png" class="menu-img img-fluid" alt="" /></a>
               <h4>Laboriosam Direva</h4>
               <p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
               <p class="price">$9.95</p>
@@ -447,7 +447,7 @@
                   </div>
                 </div>
                 <div class="col-lg-2 text-center">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="" />
+                  <img src="<?= BASEURL; ?>/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="" />
                 </div>
               </div>
             </div>
@@ -470,7 +470,7 @@
                   </div>
                 </div>
                 <div class="col-lg-2 text-center">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="" />
+                  <img src="<?= BASEURL; ?>/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="" />
                 </div>
               </div>
             </div>
@@ -493,7 +493,7 @@
                   </div>
                 </div>
                 <div class="col-lg-2 text-center">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="" />
+                  <img src="<?= BASEURL; ?>/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="" />
                 </div>
               </div>
             </div>
@@ -516,7 +516,7 @@
                   </div>
                 </div>
                 <div class="col-lg-2 text-center">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img" alt="" />
+                  <img src="<?= BASEURL; ?>/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img" alt="" />
                 </div>
               </div>
             </div>
@@ -540,28 +540,28 @@
       <div class="gallery-slider swiper">
         <div class="swiper-wrapper align-items-center">
           <div class="swiper-slide">
-            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="" /></a>
+            <a class="glightbox" data-gallery="images-gallery" href="<?= BASEURL; ?>/img/gallery/gallery-1.jpg"><img src="<?= BASEURL; ?>/img/gallery/gallery-1.jpg" class="img-fluid" alt="" /></a>
           </div>
           <div class="swiper-slide">
-            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt="" /></a>
+            <a class="glightbox" data-gallery="images-gallery" href="<?= BASEURL; ?>/img/gallery/gallery-2.jpg"><img src="<?= BASEURL; ?>/img/gallery/gallery-2.jpg" class="img-fluid" alt="" /></a>
           </div>
           <div class="swiper-slide">
-            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt="" /></a>
+            <a class="glightbox" data-gallery="images-gallery" href="<?= BASEURL; ?>/img/gallery/gallery-3.jpg"><img src="<?= BASEURL; ?>/img/gallery/gallery-3.jpg" class="img-fluid" alt="" /></a>
           </div>
           <div class="swiper-slide">
-            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="" /></a>
+            <a class="glightbox" data-gallery="images-gallery" href="<?= BASEURL; ?>/img/gallery/gallery-4.jpg"><img src="<?= BASEURL; ?>/img/gallery/gallery-4.jpg" class="img-fluid" alt="" /></a>
           </div>
           <div class="swiper-slide">
-            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt="" /></a>
+            <a class="glightbox" data-gallery="images-gallery" href="<?= BASEURL; ?>/img/gallery/gallery-5.jpg"><img src="<?= BASEURL; ?>/img/gallery/gallery-5.jpg" class="img-fluid" alt="" /></a>
           </div>
           <div class="swiper-slide">
-            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt="" /></a>
+            <a class="glightbox" data-gallery="images-gallery" href="<?= BASEURL; ?>/img/gallery/gallery-6.jpg"><img src="<?= BASEURL; ?>/img/gallery/gallery-6.jpg" class="img-fluid" alt="" /></a>
           </div>
           <div class="swiper-slide">
-            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt="" /></a>
+            <a class="glightbox" data-gallery="images-gallery" href="<?= BASEURL; ?>/img/gallery/gallery-7.jpg"><img src="<?= BASEURL; ?>/img/gallery/gallery-7.jpg" class="img-fluid" alt="" /></a>
           </div>
           <div class="swiper-slide">
-            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt="" /></a>
+            <a class="glightbox" data-gallery="images-gallery" href="<?= BASEURL; ?>/img/gallery/gallery-8.jpg"><img src="<?= BASEURL; ?>/img/gallery/gallery-8.jpg" class="img-fluid" alt="" /></a>
           </div>
         </div>
         <div class="swiper-pagination"></div>
