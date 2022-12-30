@@ -4,7 +4,7 @@
 
 # Tugas Akhir Semester3
 
-Workshop Sistem Informasi Berbasis Website - Enyokitchen - Food Cathering Website
+Workshop Sistem Informasi Berbasis Website - Enyokitchen - Food Catering Website
 
 
 ## Authors
