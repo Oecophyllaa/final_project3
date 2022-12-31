@@ -56,24 +56,26 @@ class Post extends Controller
     } else {
       // var_dump($arrx);
       // die;
-      if ($this->model('PostModel')->insert($arrx) > 0 && $arrx['published_at'] != null) {
-        Flasher::setFlash('Postingan berhasil dipublish.', 'success');
-        header("Location: " . BASEURL . "/post");
-        exit;
+      if ($arrx['published_at'] === null) {
+        if ($this->model('PostModel')->insert($arrx) > 0) {
+          Flasher::setFlash('Draft berhasil disimpan.', 'success');
+          header("Location: " . BASEURL . "/post");
+          exit;
+        } else {
+          Flasher::setFlash('Draft gagal disimpan.', 'error');
+          header("Location: " . BASEURL . "/post");
+          exit;
+        }
       } else {
-        Flasher::setFlash('Postingan gagal dipublish.', 'error');
-        header("Location: " . BASEURL . "/post");
-        exit;
-      }
-
-      if ($this->model('PostModel')->insert($arrx) > 0 && $arrx['published_at'] == null) {
-        Flasher::setFlash('Draft berhasil disimpan.', 'success');
-        header("Location: " . BASEURL . "/post");
-        exit;
-      } else {
-        Flasher::setFlash('Postingan gagal disimpan.', 'error');
-        header("Location: " . BASEURL . "/post");
-        exit;
+        if ($this->model('PostModel')->insert($arrx) > 0) {
+          Flasher::setFlash('Artikel berhasil diposting.', 'success');
+          header("Location: " . BASEURL . "/post");
+          exit;
+        } else {
+          Flasher::setFlash('Artikel gagal diposting.', 'error');
+          header("Location: " . BASEURL . "/post");
+          exit;
+        }
       }
     }
   }
