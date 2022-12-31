@@ -18,7 +18,7 @@
       <p class="mb-0">List Postingan Aktif untuk Blogspot Web</p>
     </div>
     <div class="d-flex align-items-center">
-      <a href="<?= BASEURL; ?>/menu/create" class="btn btn-outline-gray-600 d-inline-flex align-items-center">
+      <a href="<?= BASEURL; ?>/post/create" class="btn btn-outline-gray-600 d-inline-flex align-items-center">
         <svg class="icon icon-xs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
         </svg> New Post

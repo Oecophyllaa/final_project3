@@ -30,7 +30,7 @@ class Menu extends Controller
 
   public function detail($id)
   {
-    $data['title'] = 'Detail Menu';
+    $data['title'] = 'Menu';
     $data['menu'] = $this->model('MenuModel')->getMenuById($id);
 
     $this->view('templates/adminsidebar', $data);
@@ -41,7 +41,7 @@ class Menu extends Controller
 
   public function create()
   {
-    $data['title'] = "Create Menu";
+    $data['title'] = "Menu";
     $data['kategori'] = $this->model('KategoriModel')->getAllKategori();
     $data['jenis'] = $this->model('JenisModel')->getAllJenis();
 
@@ -104,7 +104,7 @@ class Menu extends Controller
 
   public function edit($id)
   {
-    $data['title'] = "Edit Menu";
+    $data['title'] = "Menu";
     $data['menu'] = $this->model('MenuModel')->getMenuById($id);
     $data['kategori'] = $this->model('KategoriModel')->getAllKategori();
     $data['jenis'] = $this->model('JenisModel')->getAllJenis();
