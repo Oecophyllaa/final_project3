@@ -36,12 +36,13 @@
                 <label for="body">Isi Post</label>
                 <textarea class="form-control" placeholder="Berikan konten yang informatif" name="body" id="body" rows="5" required></textarea>
               </div>
+              <input type="hidden" name="excerpt" id="excerpt" value="">
             </div>
           </div>
           <div class="row">
             <div class="col-lg">
-              <button class="btn btn-info" type="submit" name="publish" value="<?= date("Y-m-d H:i:s"); ?>">Publish Now</button>
-              <button class="btn btn-gray-200" type="submit" name="publish" value="null">Save Draft</button>
+              <button class="btn btn-info" type="submit" name="publish" value="<?= date("Y-m-d H:i:s"); ?>" onclick="formatInputs()">Publish Now</button>
+              <button class="btn btn-gray-200" type="submit" name="publish" value="null" onclick="formatInputs()">Save Draft</button>
             </div>
           </div>
         </form>

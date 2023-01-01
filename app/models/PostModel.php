@@ -12,9 +12,17 @@ class PostModel
 
   public function getAllPosts()
   {
-    $query = "SELECT id, title, excerpt, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts;";
+    $query = "SELECT id, title, slug, excerpt, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts;";
     $this->db->query($query);
     return $this->db->resultSet();
+  }
+
+  public function getPostBySlug($slug)
+  {
+    $query = "SELECT id, title, body, excerpt, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts WHERE slug=:slug;";
+    $this->db->query($query);
+    $this->db->bind('slug', $slug);
+    return $this->db->single();
   }
 
   public function getExcerpt($str, $startPos = 0, $maxLength = 120)

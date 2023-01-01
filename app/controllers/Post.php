@@ -28,6 +28,19 @@ class Post extends Controller
     $this->view('templates/adminfooter');
   }
 
+  public function show($slug)
+  {
+    $data['title'] = "Post";
+    $data['data'] = $this->model('PostModel')->getPostBySlug($slug);
+    // var_dump($data['data']);
+    // die;
+
+    $this->view('templates/adminsidebar', $data);
+    $this->view('templates/adminheader', $data);
+    $this->view('post/detail', $data);
+    $this->view('templates/adminfooter');
+  }
+
   public function create()
   {
     $data['title'] = "Post";
@@ -43,7 +56,7 @@ class Post extends Controller
     $arrx = [
       "title" => $_POST['title'],
       "slug" => $this->model('PostModel')->slugify($_POST['title']),
-      "excerpt" => $this->model('PostModel')->getExcerpt($_POST['body']),
+      "excerpt" => $this->model('PostModel')->getExcerpt($_POST['excerpt']),
       "body" => $_POST['body'],
       "id_admin" => $_SESSION['userdata']['userId'],
       "published_at" => $_POST['publish']  == "null" ? null : $_POST['publish']

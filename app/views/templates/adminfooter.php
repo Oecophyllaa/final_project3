@@ -71,6 +71,15 @@
     $('#labelFile').text(filename);
   })
 </script>
+
+<script>
+  function formatInputs() {
+    let txt = document.getElementById("body").value;
+    document.getElementById("excerpt").value = txt;
+    let txttostore = '<p>' + txt.replace(/\n/g, "</p>\n<p>") + '</p>';
+    document.getElementById("body").value = txttostore;
+  }
+</script>
 </body>
 
 </html>
