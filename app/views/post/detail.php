@@ -30,9 +30,22 @@
           <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-              <h3 class="text-center"><?= $data['data']['title']; ?></h3>
+              <div class="text-center">
+                <h3 class="mb-3"><?= $data['data']['title']; ?></h3>
+                <img src="<?= BASEURL; ?>/img/menu/ramen.jpg" class="img-thumbnail w-50 mt-0 mb-3" alt="gambar-post">
+              </div>
               <div class="text-justify">
                 <?= $data['data']['body']; ?>
+              </div>
+              <blockquote class="blockquote text-end">
+                <h6 class="mb-0">Published at: <?= $data['data']['published_at']; ?></h6>
+                <footer class="blockquote-footer mt-0 text-primary"><?= $data['data']['admin']; ?></footer>
+              </blockquote>
+              <div class="row">
+                <div class="col">
+                  <a href="<?= BASEURL; ?>/post" class="btn btn-gray-200 float-end" type="button">Back</a>
+                  <button class="btn btn-warning float-end me-2" type="button">Edit</button>
+                </div>
               </div>
             </div>
             <div class="col-2"></div>

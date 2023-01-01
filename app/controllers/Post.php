@@ -92,4 +92,17 @@ class Post extends Controller
       }
     }
   }
+
+  public function destroy($id)
+  {
+    if ($this->model('PostModel')->delete($id) > 0) {
+      Flasher::setFlash('Postingan berhasil dihapus.', 'success');
+      header("Location: " . BASEURL . "/post");
+      exit;
+    } else {
+      Flasher::setFlash('Postingan gagal dihapus.', 'error');
+      header("Location: " . BASEURL . "/post");
+      exit;
+    }
+  }
 }
