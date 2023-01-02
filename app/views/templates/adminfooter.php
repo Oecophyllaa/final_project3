@@ -79,6 +79,11 @@
     let txttostore = '<p>' + txt.replace(/\n/g, "</p>\n<p>") + '</p>';
     document.getElementById("body").value = txttostore;
   }
+
+  function parseData() {
+    let txt = document.getElementById("body").value;
+    document.getElementById("body").innerHTML = txt.replace(/(<([^>]+)>)/ig, "");
+  }
 </script>
 </body>
 

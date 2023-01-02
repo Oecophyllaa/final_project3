@@ -9,13 +9,13 @@
         </a>
       </li>
       <li class="breadcrumb-item"><a href="<?= BASEURL; ?>/post">Post</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Create Post</li>
+      <li class="breadcrumb-item active" aria-current="page">Edit Post</li>
     </ol>
   </nav>
   <div class="d-flex justify-content-between w-100 flex-wrap">
     <div class="mb-3 mb-lg-0">
-      <h1 class="h4">Create Post</h1>
-      <p class="mb-0">Membuat postingan baru yang informatif dan menarik.</p>
+      <h1 class="h4">Edit Postingan</h1>
+      <p class="mb-0">Suntingan postingan kamu agar lebih menarik.</p>
     </div>
   </div>
 </div>
@@ -24,22 +24,23 @@
   <div class="col-12 mb-4">
     <div class="card border-0 shadow components-section">
       <div class="card-body">
-        <form action="<?= BASEURL; ?>/post/store" method="post" enctype="multipart/form-data">
+        <form action="<?= BASEURL; ?>/post/update/<?= $data['post']['id']; ?>" method="post" enctype="multipart/form-data">
           <div class="row mb-2">
             <div class="col-lg-12 col-sm-12">
               <div class="mb-3">
                 <label for="title">Judul Artikel</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="Berikan judul yang menarik" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control" name="title" id="title" value="<?= $data['post']['title']; ?>" aria-describedby="emailHelp" autofocus onfocus="parseData()" required>
                 <small id="emailHelp" class="form-text text-muted">Judul harus kurang dari 50 karakter.</small>
               </div>
               <div class="mb-3">
                 <label for="body">Isi Artikel</label>
-                <textarea class="form-control" placeholder="Berikan konten yang informatif" name="body" id="body" rows="5" required></textarea>
+                <textarea class="form-control" name="body" id="body" rows="5" required><?= $data['post']['body']; ?></textarea>
               </div>
               <input type="hidden" name="excerpt" id="excerpt" value="">
               <div class="mb-0">
                 <label for="gambar" class="form-label">Gambar Artikel</label>
                 <input class="form-control" type="file" id="gambar" name="gambar">
+                <small id="emailHelp" class="form-label text-muted">File harus kurang dari 5MB. (jpg, jpeg, png)</small>
               </div>
             </div>
           </div>

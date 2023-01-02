@@ -19,7 +19,7 @@ class Admin extends Controller
 
   public function index()
   {
-    $data['title'] = 'Admin';
+    $data['title'] = 'Dashboard';
 
     $this->view('templates/adminsidebar', $data);
     $this->view('templates/adminheader', $data);

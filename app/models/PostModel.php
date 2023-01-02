@@ -17,9 +17,17 @@ class PostModel
     return $this->db->resultSet();
   }
 
+  public function getPostById($id)
+  {
+    $query = "SELECT id, gambar, title, slug, excerpt, body, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts WHERE id=:id;";
+    $this->db->query($query);
+    $this->db->bind('id', $id);
+    return $this->db->single();
+  }
+
   public function getPostBySlug($slug)
   {
-    $query = "SELECT id, title, body, excerpt, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts WHERE slug=:slug;";
+    $query = "SELECT id, gambar, title, slug, excerpt, body, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts WHERE slug=:slug;";
     $this->db->query($query);
     $this->db->bind('slug', $slug);
     return $this->db->single();
@@ -62,14 +70,32 @@ class PostModel
 
   public function insert($input)
   {
-    $query = "INSERT INTO posts VALUES('',:title,:slug,:excerpt,:body,:id_admin,:published_at)";
+    $query = "INSERT INTO posts VALUES('',:gambar,:title,:slug,:excerpt,:body,:id_admin,:published_at)";
     $this->db->query($query);
+    $this->db->bind('gambar', $input['gambar']);
     $this->db->bind('title', $input['title']);
     $this->db->bind('slug', $input['slug']);
     $this->db->bind('excerpt', $input['excerpt']);
     $this->db->bind('body', $input['body']);
     $this->db->bind('id_admin', $input['id_admin']);
     $this->db->bind('published_at', $input['published_at']);
+    $this->db->execute();
+
+    return $this->db->rowCount();
+  }
+
+  public function update($input)
+  {
+    $query = "UPDATE posts SET gambar=:gambar, title=:title, slug=:slug, excerpt=:excerpt, body=:body, id_admin=:id_admin, published_at=:published_at WHERE id=:id;";
+    $this->db->query($query);
+    $this->db->bind('gambar', $input['gambar']);
+    $this->db->bind('title', $input['title']);
+    $this->db->bind('slug', $input['slug']);
+    $this->db->bind('excerpt', $input['excerpt']);
+    $this->db->bind('body', $input['body']);
+    $this->db->bind('id_admin', $input['id_admin']);
+    $this->db->bind('published_at', $input['published_at']);
+    $this->db->bind('id', $input['id']);
     $this->db->execute();
 
     return $this->db->rowCount();
