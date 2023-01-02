@@ -10,6 +10,13 @@ class MenuModel
     $this->db = new Database;
   }
 
+  public function count()
+  {
+    $query = "SELECT COUNT(id_menu) AS jml_menu FROM menu;";
+    $this->db->query($query);
+    return $this->db->single();
+  }
+
   public function getAllMenu()
   {
     $query = "SELECT menu.id_menu, menu.nama_menu, kategori.nama_kategori, jenis.nama_jenis, menu.deskripsi, menu.rating, menu.harga FROM ((menu INNER JOIN kategori ON menu.id_kategori = kategori.id_kategori) INNER JOIN jenis ON menu.id_jenis = jenis.id_jenis) ORDER BY menu.id_menu ASC";

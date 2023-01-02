@@ -20,6 +20,11 @@ class Admin extends Controller
   public function index()
   {
     $data['title'] = 'Dashboard';
+    $data['data'] = [
+      "jml_admin" => $this->model('UserModel')->count()['jml_user'],
+      "jml_menu" => $this->model('MenuModel')->count()['jml_menu'],
+      "jml_post" => $this->model('PostModel')->count()['jml_post'],
+    ];
 
     $this->view('templates/adminsidebar', $data);
     $this->view('templates/adminheader', $data);

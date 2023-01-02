@@ -10,6 +10,13 @@ class PostModel
     $this->db = new Database;
   }
 
+  public function count()
+  {
+    $query = "SELECT COUNT(id) AS jml_post FROM posts;";
+    $this->db->query($query);
+    return $this->db->single();
+  }
+
   public function getAllPosts()
   {
     $query = "SELECT id, title, slug, excerpt, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts;";

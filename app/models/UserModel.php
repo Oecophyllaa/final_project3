@@ -10,6 +10,13 @@ class UserModel
     $this->db = new Database;
   }
 
+  public function count()
+  {
+    $query = "SELECT COUNT(id_user) AS jml_user FROM user;";
+    $this->db->query($query);
+    return $this->db->single();
+  }
+
   public function signin($input)
   {
     $email = $input['email'];
