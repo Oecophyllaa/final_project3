@@ -21,6 +21,9 @@ class Menu extends Controller
   {
     $data["title"] = "Menu";
     $data["menu"] = $this->model('MenuModel')->getAllMenu();
+    for ($i = 0; $i < sizeof($data['menu']); $i++) {
+      $data['menu'][$i]['deskripsi'] = $this->model('PostModel')->getExcerpt($data['menu'][$i]['deskripsi']);
+    }
 
     $this->view('templates/adminsidebar', $data);
     $this->view('templates/adminheader', $data);
@@ -53,9 +56,6 @@ class Menu extends Controller
 
   public function store()
   {
-    // var_dump($_POST);
-    // var_dump($_FILES['gambar']);
-    // die;
     $file_name = $_FILES['gambar']['name'];
     $file_size = $_FILES['gambar']['size'];
     $file_temp = $_FILES['gambar']['tmp_name'];
@@ -83,13 +83,9 @@ class Menu extends Controller
       exit;
     }
 
-    if (file_exists($target_dir . $file_name)) {
-      Flasher::setFlash('File Already Exists', 'error');
-      header("Location: " . BASEURL . "/menu/create");
-      exit;
+    if (!file_exists($target_dir . $file_name)) {
+      move_uploaded_file($file_temp, $target_dir . $file_name);
     }
-
-    move_uploaded_file($file_temp, $target_dir . $file_name);
 
     if ($this->model('MenuModel')->storeMenu($_POST, $file_name) > 0) {
       Flasher::setFlash('Menu berhasil ditambahkan.', 'success');
@@ -117,7 +113,48 @@ class Menu extends Controller
 
   public function update()
   {
-    if ($this->model('MenuModel')->updateMenu($_POST) > 0) {
+    $file_name = $_FILES['gambar']['name'];
+    $file_size = $_FILES['gambar']['size'];
+    $file_temp = $_FILES['gambar']['tmp_name'];
+    $file_errx = $_FILES['gambar']['error'];
+    $target_dir = "C:/xampp/htdocs/final-project/public/img/uploads/menu/";
+
+    if ($file_errx === 4) {
+      $getMenu = $this->model('MenuModel')->getMenuById($_POST['id_menu']);
+      $file_name = $getMenu['gambar'];
+    } else {
+      $valid_ext = ['jpg', 'jpeg', 'png'];
+      $photo_ext = explode('.', $file_name);
+      $photo_ext = strtolower(end($photo_ext));
+      if (!in_array($photo_ext, $valid_ext)) {
+        Flasher::setFlash('Must be JPG, JPEG, PNG', 'error');
+        header("Location: " . BASEURL . "/menu/edit/" . $_POST['id_menu']);
+        exit;
+      }
+
+      if ($file_size > 5 * MB) {
+        Flasher::setFlash('File size must less than 5MB', 'error');
+        header("Location: " . BASEURL . "/menu/edit/" . $_POST['id_menu']);
+        exit;
+      }
+
+      if (!file_exists($target_dir . $file_name)) {
+        move_uploaded_file($file_temp, $target_dir . $file_name);
+      }
+    }
+
+    $arrx = [
+      "id_menu" => $_POST['id_menu'],
+      "nama_menu" => $_POST['nama_menu'],
+      "id_kategori" => $_POST['id_kategori'],
+      "id_jenis" => $_POST['id_jenis'],
+      "deskripsi" => $_POST['deskripsi'],
+      "rating" => $_POST['rating'],
+      "harga" => $_POST['harga'],
+      "gambar" => $file_name
+    ];
+
+    if ($this->model('MenuModel')->update($arrx) > 0) {
       Flasher::setFlash('Menu berhasil diupdate.', 'success');
       header("Location: " . BASEURL . "/menu");
       exit;

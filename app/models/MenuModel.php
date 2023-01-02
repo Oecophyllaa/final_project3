@@ -41,17 +41,18 @@ class MenuModel
     return $this->db->rowCount();
   }
 
-  public function updateMenu($data)
+  public function update($input)
   {
-    $query = "UPDATE menu SET nama_menu=:nama_menu, id_kategori=:id_kategori, id_jenis=:id_jenis, deskripsi=:deskripsi, rating=:rating, harga=:harga WHERE id_menu=:id_menu ";
+    $query = "UPDATE menu SET nama_menu=:nama_menu, id_kategori=:id_kategori, id_jenis=:id_jenis, deskripsi=:deskripsi, rating=:rating, harga=:harga, gambar=:gambar WHERE id_menu=:id_menu ";
     $this->db->query($query);
-    $this->db->bind('nama_menu', $data['nama_menu']);
-    $this->db->bind('id_kategori', $data['id_kategori']);
-    $this->db->bind('id_jenis', $data['id_jenis']);
-    $this->db->bind('deskripsi', $data['deskripsi']);
-    $this->db->bind('rating', $data['rating']);
-    $this->db->bind('harga', $data['harga']);
-    $this->db->bind('id_menu', $data['id_menu']);
+    $this->db->bind('nama_menu', $input['nama_menu']);
+    $this->db->bind('id_kategori', $input['id_kategori']);
+    $this->db->bind('id_jenis', $input['id_jenis']);
+    $this->db->bind('deskripsi', $input['deskripsi']);
+    $this->db->bind('rating', $input['rating']);
+    $this->db->bind('harga', $input['harga']);
+    $this->db->bind('gambar', $input['gambar']);
+    $this->db->bind('id_menu', $input['id_menu']);
     $this->db->execute();
 
     return $this->db->rowCount();

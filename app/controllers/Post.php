@@ -32,8 +32,6 @@ class Post extends Controller
   {
     $data['title'] = "Post";
     $data['data'] = $this->model('PostModel')->getPostBySlug($slug);
-    // var_dump($data['data']);
-    // die;
 
     $this->view('templates/adminsidebar', $data);
     $this->view('templates/adminheader', $data);
@@ -80,13 +78,9 @@ class Post extends Controller
       exit;
     }
 
-    if (file_exists($target_dir . $file_name)) {
-      Flasher::setFlash('File Already Exists', 'error');
-      header("Location: " . BASEURL . "/post/create");
-      exit;
+    if (!file_exists($target_dir . $file_name)) {
+      move_uploaded_file($file_temp, $target_dir . $file_name);
     }
-
-    move_uploaded_file($file_temp, $target_dir . $file_name);
 
     $arrx = [
       "gambar" => $file_name,
@@ -131,8 +125,6 @@ class Post extends Controller
   {
     $data['title'] = "Post";
     $data['post'] = $this->model('PostModel')->getPostBySlug($slug);
-    // var_dump(htmlspecialchars_decode($data['post']['body']));
-    // die;
 
     $this->view('templates/adminsidebar', $data);
     $this->view('templates/adminheader', $data);
@@ -142,9 +134,6 @@ class Post extends Controller
 
   public function update($id)
   {
-    // var_dump($_FILES);
-    // var_dump($_POST);
-    // die;
     $file_name = $_FILES['gambar']['name'];
     $file_size = $_FILES['gambar']['size'];
     $file_temp = $_FILES['gambar']['tmp_name'];
@@ -185,9 +174,6 @@ class Post extends Controller
       "id_admin" => $_SESSION['userdata']['userId'],
       "published_at" => $_POST['publish']  == "null" ? null : $_POST['publish']
     ];
-
-    // var_dump($arrx);
-    // die;
 
     if (strlen($_POST['title']) > 50) {
       Flasher::setFlash('Judul Terlalu Panjang!', 'error');

@@ -47,7 +47,7 @@
           <div class="row">
             <div class="col-lg">
               <button class="btn btn-info" type="submit" name="publish" value="<?= date("Y-m-d H:i:s"); ?>" onclick="formatInputs()">Publish Now</button>
-              <button class="btn btn-gray-200" type="submit" name="publish" value="null" onclick="formatInputs()">Save Draft</button>
+              <button class="btn btn-gray-200" type="submit" name="publish" value="null" onclick="formatInputs()"><?= $data['post']['published_at'] !== null ? "Archive" : "Save Draft"; ?></button>
             </div>
           </div>
         </form>

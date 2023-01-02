@@ -24,7 +24,7 @@
   <div class="col-12 mb-4">
     <div class="card border-0 shadow components-section">
       <div class="card-body">
-        <form action="<?= BASEURL; ?>/menu/update" method="post">
+        <form action="<?= BASEURL; ?>/menu/update" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id_menu" value="<?= $data['menu']['id_menu']; ?>">
           <div class="row mb-2">
             <div class="col-lg-6 col-sm-12">
@@ -55,7 +55,7 @@
                 <textarea class="form-control" placeholder="Deskripsi Menu" name="deskripsi" id="deskripsi" rows="5"><?= $data['menu']['deskripsi']; ?></textarea>
               </div>
               <div class="row">
-                <div class="col-lg-6 col-sm-12">
+                <div class="col-lg-4 col-sm-12">
                   <div class="mb-0">
                     <label for="rating">Rating</label>
                     <div class="input-group">
@@ -68,7 +68,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-sm-12">
+                <div class="col-lg-4 col-sm-12">
                   <div class="mb-0">
                     <label for="harga">Harga</label>
                     <div class="input-group">
@@ -77,8 +77,14 @@
                           <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
                         </svg>
                       </span>
-                      <input type="number" class="form-control" name="harga" id="harga" value="<?= $data['menu']['harga']; ?>" aria-label="Harga" required>
+                      <input type="text" class="form-control" name="harga" id="harga" value="<?= $data['menu']['harga']; ?>" aria-label="Harga" required>
                     </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                  <div class="mb-0">
+                    <label for="formFile" class="form-label">Gambar</label>
+                    <input class="form-control" type="file" id="formFile" name="gambar">
                   </div>
                 </div>
               </div>
