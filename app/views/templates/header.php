@@ -10,7 +10,7 @@
   <meta content="" name="keywords" />
 
   <!-- Favicons -->
-  <link href="<?= BASEURL; ?>/img/yummy/favicon.png" rel="icon" />
+  <link href="<?= BASEURL; ?>/img/favicon/favicon.png" rel="icon" />
   <link href="<?= BASEURL; ?>/img/yummy/apple-touch-icon.png" rel="apple-touch-icon" />
 
   <!-- Google Fonts -->

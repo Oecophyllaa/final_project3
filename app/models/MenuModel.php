@@ -32,6 +32,14 @@ class MenuModel
     return $this->db->single();
   }
 
+  public function getMenuByKategori($id_kat)
+  {
+    $query = "SELECT id_menu, gambar, nama_menu, rating, harga FROM menu WHERE id_kategori=:id_kategori;";
+    $this->db->query($query);
+    $this->db->bind('id_kategori', $id_kat);
+    return $this->db->resultSet();
+  }
+
   public function storeMenu($input, $img)
   {
     $query = "INSERT INTO menu VALUES ('',:nama_menu,:id_kategori,:id_jenis,:deskripsi,:rating,:harga,:gambar) ";
