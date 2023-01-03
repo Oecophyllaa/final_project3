@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2022 at 04:52 PM
+-- Generation Time: Jan 03, 2023 at 03:23 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -46,7 +46,8 @@ CREATE TABLE `detail_user` (
 --
 
 INSERT INTO `detail_user` (`id_detailuser`, `first_name`, `last_name`, `birthday`, `gender`, `email`, `phone`, `city`, `country`, `job`, `photo`) VALUES
-(1, 'Rangga', 'Raditya Nugroho', '2003-03-22', 'Male', 'admin@gmail.com', '0812-0912-1012', 'Sidoarjo', 'Indonesia', 'Admin', 'kmipn.jpg');
+(1, 'Rangga', 'Raditya Nugroho', '2003-03-22', 'Male', 'admin@gmail.com', '0812-0912-1012', 'Sidoarjo', 'Indonesia', 'Admin', 'kmipn.jpg'),
+(2, 'Hyungmon', 'Hohenheim', '2003-08-07', 'Male', 'hyungmon@gmail.com', '0814-5757-0909', 'Medan', 'Indonesia', 'Admin', 'marci.jpg');
 
 -- --------------------------------------------------------
 
@@ -110,9 +111,9 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id_menu`, `nama_menu`, `id_kategori`, `id_jenis`, `deskripsi`, `rating`, `harga`, `gambar`) VALUES
-(1, 'Spaghetti Carbonara', 2, 1, 'Spaghetti Carbonara adalah masakan Italia yang berupa spaghetti yang dimasak dengan saus telur, keju dan daging.', '4.6(1,120)', '21.000', ''),
-(7, 'Shrimp Ramen', 3, 1, 'Shrimp Ramen wa oishi desu.', '4.3(154)', '23.000', ''),
-(11, 'Appetizer1', 2, 2, 'Appetizer menu', '4.3(234)', '14.000', 'apt-1.jpg');
+(11, 'Turkish Delight', 2, 2, 'Appetizer Buah Salad Enak', '4.3(234)', '14000', 'apt-4.jpg'),
+(12, 'Nasi Goreng Seafood', 1, 1, 'Nasi goreng seafood adalah salah satu jenis nasi goreng yang terbuat dari nasi putih yang telah difermentasi, diaduk bersama dengan rempah-rempah yang telah dihaluskan, bahan-bahan seafood seperti udang, kepiting, dan cumi-cumi, serta sayuran-sayuran seperti kacang panjang, bawang merah, dan bawang putih. Nasi goreng seafood ini biasanya dihidangkan panas-panas dengan taburan bawang goreng di atasnya.', '4.5(78)', '25000', 'apt-1.jpg'),
+(13, 'Dango', 3, 3, 'Dango (団子) adalah kue Jepang berbentuk bulat seperti bola kecil, terbuat dari mochiko (tepung beras), dan dimatangkan dengan cara dikukus atau direbus di dalam air.', '4.5(154)', '15000', 'dst-4.jpg');
 
 -- --------------------------------------------------------
 
@@ -122,6 +123,7 @@ INSERT INTO `menu` (`id_menu`, `nama_menu`, `id_kategori`, `id_jenis`, `deskrips
 
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
+  `gambar` text NOT NULL,
   `title` varchar(100) NOT NULL,
   `slug` varchar(100) NOT NULL,
   `excerpt` text NOT NULL,
@@ -134,11 +136,12 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `slug`, `excerpt`, `body`, `id_admin`, `published_at`) VALUES
-(1, 'Judul Pertama', 'judul-pertama', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit est nihil quasi aspernatur sint magnam molestiae dolorem optio nesciunt harum.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit est nihil quasi aspernatur sint magnam molestiae dolorem optio nesciunt harum. A, culpa libero commodi possimus facere, magni reprehenderit labore hic nisi nulla iure et accusantium adipisci nihil, consectetur ipsam suscipit repudiandae quis error corporis! Soluta quod beatae cupiditate maiores dolore numquam unde dicta, quis vero, recusandae eos. Quo corporis blanditiis atque qui aut rerum earum voluptates ipsa suscipit quis vel quos, accusamus nobis error ullam quod deserunt, hic velit voluptatum sed explicabo expedita eum aspernatur? Tempora, soluta nesciunt, quia consequuntur, tenetur quos temporibus inventore nostrum delectus nobis quibusdam ex possimus?', 1, NULL),
-(2, 'Judul Kedua', 'judul-kedua', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequuntur sed, veritatis impedit vitae molestias ab voluptate cum.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequuntur sed, veritatis impedit vitae molestias ab voluptate cum. Nesciunt consequuntur quis, ad ut vel harum quod ullam magnam natus doloribus? Alias rem architecto magnam, nemo omnis ratione officiis nesciunt eum voluptate corporis, recusandae pariatur maiores. Commodi impedit harum provident corporis maiores voluptates placeat molestiae doloribus natus. Impedit voluptatem pariatur autem, quibusdam necessitatibus porro fugit, quam molestias molestiae ipsum accusamus possimus sit. Eius illum sint ipsum, rerum accusantium quas possimus iure!', 1, '2022-12-31 02:47:45'),
-(5, 'Pengertian Ayam Bakar', 'pengertian-ayam-bakar', 'Ayam bakar adalah salah satu makanan yang populer di berbagai negara di dunia. Ayam bakar terdiri dari potongan ayam...', 'Ayam bakar adalah salah satu makanan yang populer di berbagai negara di dunia. Ayam bakar terdiri dari potongan ayam yang dipanggang atau dibakar dengan bahan-bahan seperti rempah-rempah, kecap manis, dan bumbu lainnya. Ayam bakar biasanya disajikan dengan nasi putih atau nasi goreng, serta sayuran segar seperti timun, buncis, atau salad. Ayam bakar juga sering disajikan dengan sambal atau saus lainnya sebagai pelengkap. Ayam bakar bisa dinikmati sebagai makanan pokok atau sebagai makanan sampingan, tergantung pada preferensi masing-masing orang.', 1, '2022-12-31 09:44:01'),
-(12, 'ndoasdnasiodsandoas', 'ndoasdnasiodsandoas', 'Nasi goreng adalah makanan tradisional Indonesia yang terdiri dari nasi yang digoreng bersama dengan berbagai bahan...', 'Nasi goreng adalah makanan tradisional Indonesia yang terdiri dari nasi yang digoreng bersama dengan berbagai bahan seperti telur, daging, seafood, atau sayuran. Biasanya, nasi goreng ditambahkan kecap manis, bawang merah, bawang putih, dan rempah-rempah lainnya untuk memberikan rasa yang lebih kompleks. Nasi goreng juga sering disajikan bersama dengan irisan timun dan acar timun atau acar mentimun sebagai pelengkap. Nasi goreng bisa dinikmati sebagai makanan pokok atau sebagai makanan sampingan, tergantung pada preferensi masing-masing orang.', 1, NULL);
+INSERT INTO `posts` (`id`, `gambar`, `title`, `slug`, `excerpt`, `body`, `id_admin`, `published_at`) VALUES
+(1, 'mc-6.jpg', 'Keunikan Nasi Goreng Babat', 'keunikan-nasi-goreng-babat', 'Nasi goreng babat adalah salah satu jenis nasi goreng yang terbuat dari nasi putih yang telah difermentasi, diaduk...', '<p>Nasi goreng babat adalah salah satu jenis nasi goreng yang terbuat dari nasi putih yang telah difermentasi, diaduk bersama dengan babat, bahan yang terbuat dari usus sapi yang dicuci bersih dan dipotong kecil-kecil, serta rempah-rempah seperti bawang merah, bawang putih, dan cabe rawit yang telah dihaluskan. Nasi goreng babat ini biasanya dihidangkan panas-panas dengan taburan bawang goreng di atasnya.</p>\r\n<p></p>\r\n<p>Rasa nasi goreng babat ini cukup kuat, terutama karena rempah-rempah yang digunakan dan babat yang terkandung di dalamnya. Babat yang digunakan memiliki rasa yang khas dan kuat, sehingga membuat nasi goreng ini terasa lebih beraroma. Nasi goreng babat ini juga biasanya tidak terlalu pedas, sehingga cocok untuk dikonsumsi oleh siapa saja, termasuk anak-anak.</p>\r\n<p></p>\r\n<p>Nasi goreng babat ini bisa dijadikan sebagai makanan utama ataupun sebagai makanan sampingan. Biasanya, nasi goreng babat ini disajikan bersama dengan kerupuk atau acar timun sebagai pelengkap. Selain itu, nasi goreng babat ini juga bisa diolah menjadi nasi goreng babat telur dengan menambahkan telur yang dikocok lepas ke dalamnya. Nasi goreng babat ini biasanya tersedia di warung-warung makan di Indonesia.</p>', 1, NULL),
+(3, 'dst-6.jpg', 'Seputar Tentang Nasi Goreng Seafood', 'seputar-tentang-nasi-goreng-seafood', 'Nasi goreng seafood adalah salah satu jenis nasi goreng yang terbuat dari nasi putih yang telah difermentasi, diaduk...', '<p>Nasi goreng seafood adalah salah satu jenis nasi goreng yang terbuat dari nasi putih yang telah difermentasi, diaduk bersama dengan rempah-rempah yang telah dihaluskan, bahan-bahan seafood seperti udang, kepiting, dan cumi-cumi, serta sayuran-sayuran seperti kacang panjang, bawang merah, dan bawang putih. Nasi goreng seafood ini biasanya dihidangkan panas-panas dengan taburan bawang goreng di atasnya.</p>\r\n<p></p>\r\n<p>Rasa nasi goreng seafood ini cukup kuat, terutama karena rempah-rempah yang digunakan dan bahan-bahan seafood yang terkandung di dalamnya. Udang, kepiting, dan cumi-cumi yang digunakan juga memiliki rasa yang khas dan kuat, sehingga membuat nasi goreng ini terasa lebih beraroma. Nasi goreng seafood ini juga biasanya tidak terlalu pedas, sehingga cocok untuk dikonsumsi oleh siapa saja, termasuk anak-anak.</p>\r\n<p></p>\r\n<p>Nasi goreng seafood ini bisa dijadikan sebagai makanan utama ataupun sebagai makanan sampingan. Biasanya, nasi goreng seafood ini disajikan bersama dengan kerupuk atau acar timun sebagai pelengkap. Selain itu, nasi goreng seafood ini juga bisa diolah menjadi nasi goreng seafood telur dengan menambahkan telur yang dikocok lepas ke dalamnya. Nasi goreng seafood ini biasanya tersedia di restoran-restoran Indonesia ataupun di warung-warung makan di Indonesia.</p>', 1, '2023-01-02 10:24:05'),
+(4, 'mc-6.jpg', 'Ikan Bakar Bumbu Enak', 'ikan-bakar-bumbu-enak', 'Ikan bakar adalah salah satu jenis masakan yang terbuat dari ikan yang dipanggang atau dibakar dengan cara...', '<p>Ikan bakar adalah salah satu jenis masakan yang terbuat dari ikan yang dipanggang atau dibakar dengan cara dipanggang di atas bara api atau di grill. Ikan yang biasa digunakan untuk membuat ikan bakar adalah ikan yang memiliki daging yang tebal dan lembut, seperti ikan bawal, ikan nila, atau ikan lele. Selain itu, ikan bakar juga bisa dibuat dari ikan yang memiliki daging yang lebih keras seperti ikan tongkol atau ikan cakalang.</p>\r\n<p></p>\r\n<p>Ikan bakar biasanya diolah dengan cara dibumbui terlebih dahulu dengan bahan-bahan seperti garam, merica, dan kecap manis, serta dibakar hingga matang. Ikan bakar juga bisa diolah dengan cara dibumbui dengan rempah-rempah seperti bawang merah, bawang putih, dan jahe yang dihaluskan, lalu dibakar hingga matang. Ikan bakar ini biasanya disajikan dengan sambal atau saus kecap sebagai pelengkap. Ikan bakar ini juga biasanya disajikan bersama dengan sayuran-sayuran segar seperti timun, ketimun, atau selada.</p>', 1, '2023-01-01 02:11:48'),
+(5, 'mc-8.jpg', 'Menu Makanan Sehat Dan Enak', 'menu-makanan-sehat-dan-enak', 'Makanan sehat adalah makanan yang memiliki kandungan nutrisi yang baik untuk kesehatan tubuh. Makanan sehat tidak...', '<p>Makanan sehat adalah makanan yang memiliki kandungan nutrisi yang baik untuk kesehatan tubuh. Makanan sehat tidak hanya terdiri dari sayuran dan buah-buahan saja, melainkan juga bisa berupa daging, telur, atau bahan-bahan lainnya yang diproses dengan cara yang sehat.</p>\r\n<p></p>\r\n<p>Untuk menjadi sehat, sebaiknya konsumsi makanan yang seimbang dan bergizi. Ini artinya, asupan nutrisi yang dibutuhkan tubuh harus terpenuhi dengan baik, tidak hanya dari satu sumber makanan saja. Sebaiknya hindari makanan yang terlalu manis, terlalu asin, atau yang terlalu tinggi lemak, terutama lemak jenuh. Selain itu, sebaiknya juga hindari makanan yang terlalu diproses, seperti makanan olahan, snack, atau makanan ringan yang mengandung bahan-bahan kimia. Memilih makanan sehat akan membantu tubuh kita untuk tetap sehat, lezat, bergizi, bugar.</p>', 1, '2023-01-02 07:49:10'),
+(7, 'mc-2.jpg', 'Menu Bergizi', 'menu-bergizi', 'ini isi konten\r\nbaris kedua\r\nbaris ketiga', '<p>ini isi konten</p>\r\n<p>baris kedua</p>\r\n<p>baris ketiga</p>', 2, '2023-01-02 20:19:02');
 
 -- --------------------------------------------------------
 
@@ -158,7 +161,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `email`, `password`, `level`) VALUES
-(1, 'admin@gmail.com', '0192023a7bbd73250516f069df18b500', 1);
+(1, 'admin@gmail.com', '0192023a7bbd73250516f069df18b500', 1),
+(2, 'hyungmon@gmail.com', '490426850cdca285320eb0bb6182ff84', 1);
 
 --
 -- Triggers `user`
@@ -205,7 +209,8 @@ ALTER TABLE `menu`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `slug` (`slug`);
 
 --
 -- Indexes for table `user`
@@ -222,7 +227,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detail_user`
 --
 ALTER TABLE `detail_user`
-  MODIFY `id_detailuser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_detailuser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `jenis`
@@ -240,19 +245,19 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
