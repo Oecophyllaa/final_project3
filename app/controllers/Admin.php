@@ -90,16 +90,13 @@ class Admin extends Controller
     }
 
     // Cek if file exists already
-    if (file_exists($target_dir . $file_name)) {
-      Flasher::setFlash('File Already Exists', 'error');
-      header("Location: " . BASEURL . "/admin/profile/" . $_SESSION['userdata']['userId']);
-      exit;
+    if (!file_exists($target_dir . $file_name)) {
+      // Upload the img
+      move_uploaded_file($file_temp, $target_dir . $file_name);
     }
 
-    // Upload the img
-    move_uploaded_file($file_temp, $target_dir . $file_name);
-
     if ($this->model('UserModel')->updatePhoto($id, $file_name) > 0) {
+      $_SESSION['userdata']['userImg'] = $file_name;
       Flasher::setFlash('Profile Photo Updated', 'success');
       header("Location: " . BASEURL . "/admin/profile/" . $_SESSION['userdata']['userId']);
       exit;
