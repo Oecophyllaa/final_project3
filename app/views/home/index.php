@@ -187,9 +187,13 @@
           <div class="row gy-5">
             <?php foreach ($data['menuIndo'] as $menu) : ?>
               <div class="col-lg-4 menu-item">
-                <a href="<?= BASEURL; ?>/home/show/<?= $menu['id_menu']; ?>" class="glightbox">
+                <a href="<?= BASEURL; ?>/img/uploads/menu/<?= $menu['gambar']; ?>" class="glightbox" data-glightbox="title: <?= $menu['nama_menu']; ?>; description: .custom-desc1;">
                   <img src="<?= BASEURL; ?>/img/uploads/menu/<?= $menu['gambar']; ?>" class="menu-img img-fluid" alt="img-menu-indo" />
                 </a>
+                <div class="glightbox-desc custom-desc1">
+                  <p><?= $menu['deskripsi']; ?></p>
+                  <a href="https://api.whatsapp.com/send/?phone=6281234553088&text=Halo+Enyo+Kitchenette+saya+mau+order&type=phone_number&app_absent=0" target="blank">Pesan sekarang!</a>
+                </div>
                 <h4><?= $menu['nama_menu']; ?></h4>
                 <p class="ingredients"><?= $menu['rating']; ?></p>
                 <p class="price">Rp <?= $menu['harga']; ?></p>
@@ -208,9 +212,13 @@
           <div class="row gy-5">
             <?php foreach ($data['menuWest'] as $menu) : ?>
               <div class="col-lg-4 menu-item">
-                <a href="<?= BASEURL; ?>/home/show/<?= $menu['id_menu']; ?>" class="glightbox">
+                <a href="<?= BASEURL; ?>/img/uploads/menu/<?= $menu['gambar']; ?>" class="glightbox" data-glightbox="title: <?= $menu['nama_menu']; ?>; description: .custom-desc2;">
                   <img src="<?= BASEURL; ?>/img/uploads/menu/<?= $menu['gambar']; ?>" class="menu-img img-fluid" alt="img-menu-indo" />
                 </a>
+                <div class="glightbox-desc custom-desc2">
+                  <p><?= $menu['deskripsi']; ?></p>
+                  <a href="https://api.whatsapp.com/send/?phone=6281234553088&text=Halo+Enyo+Kitchenette+saya+mau+order&type=phone_number&app_absent=0" target="blank">Pesan sekarang!</a>
+                </div>
                 <h4><?= $menu['nama_menu']; ?></h4>
                 <p class="ingredients"><?= $menu['rating']; ?></p>
                 <p class="price">Rp <?= $menu['harga']; ?></p>
@@ -229,9 +237,13 @@
           <div class="row gy-5">
             <?php foreach ($data['menuJapn'] as $menu) : ?>
               <div class="col-lg-4 menu-item">
-                <a href="<?= BASEURL; ?>/home/show/<?= $menu['id_menu']; ?>" class="glightbox">
+                <a href="<?= BASEURL; ?>/img/uploads/menu/<?= $menu['gambar']; ?>" class="glightbox" data-glightbox="title: <?= $menu['nama_menu']; ?>; description: .custom-desc3;">
                   <img src="<?= BASEURL; ?>/img/uploads/menu/<?= $menu['gambar']; ?>" class="menu-img img-fluid" alt="img-menu-indo" />
                 </a>
+                <div class="glightbox-desc custom-desc3">
+                  <p><?= $menu['deskripsi']; ?></p>
+                  <a href="https://api.whatsapp.com/send/?phone=6281234553088&text=Halo+Enyo+Kitchenette+saya+mau+order&type=phone_number&app_absent=0" target="blank">Pesan sekarang!</a>
+                </div>
                 <h4><?= $menu['nama_menu']; ?></h4>
                 <p class="ingredients"><?= $menu['rating']; ?></p>
                 <p class="price">Rp <?= $menu['harga']; ?></p>

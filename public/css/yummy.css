@@ -94,6 +94,10 @@ section {
   color: var(--color-primary);
 }
 
+.text-justify {
+  text-align: justify !important;
+}
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/

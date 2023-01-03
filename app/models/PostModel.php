@@ -24,6 +24,13 @@ class PostModel
     return $this->db->resultSet();
   }
 
+  public function getAllPublishedPosts()
+  {
+    $query = "SELECT id, title, slug, excerpt, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts WHERE published_at IS NOT NULL;";
+    $this->db->query($query);
+    return $this->db->resultSet();
+  }
+
   public function getPostById($id)
   {
     $query = "SELECT id, gambar, title, slug, excerpt, body, (SELECT first_name FROM detail_user WHERE id_detailuser = id_admin) AS admin, published_at FROM posts WHERE id=:id;";

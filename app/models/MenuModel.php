@@ -34,7 +34,7 @@ class MenuModel
 
   public function getMenuByKategori($id_kat)
   {
-    $query = "SELECT id_menu, gambar, nama_menu, rating, harga FROM menu WHERE id_kategori=:id_kategori;";
+    $query = "SELECT menu.id_menu, menu.nama_menu, kategori.nama_kategori, jenis.nama_jenis, menu.deskripsi, menu.rating, menu.harga, menu.gambar FROM ((menu INNER JOIN kategori ON menu.id_kategori = kategori.id_kategori) INNER JOIN jenis ON menu.id_jenis = jenis.id_jenis) WHERE menu.id_kategori=:id_kategori;";
     $this->db->query($query);
     $this->db->bind('id_kategori', $id_kat);
     return $this->db->resultSet();

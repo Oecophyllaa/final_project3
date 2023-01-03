@@ -9,7 +9,7 @@
       <div class="row gy-2">
         <?php foreach ($data['posts'] as $post) : ?>
           <article>
-            <h2><a href="<?= BASEURL; ?>/blog/post/<?= $post['id']; ?>"><?= $post['title']; ?></a></h2>
+            <h2><a href="<?= BASEURL; ?>/blog/post/<?= $post['slug']; ?>"><?= $post['title']; ?></a></h2>
             <p><?= $post['excerpt']; ?></p>
           </article>
         <?php endforeach; ?>
