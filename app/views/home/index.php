@@ -274,10 +274,10 @@
                   <div class="testimonial-content">
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                      Makanan di Enyokitchenette ini selalu terasa segar dan enak. Pelayanannya juga sangat ramah dan cepat.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
-                    <h3>Saul Goodman</h3>
+                    <h3>Bambang Aryo</h3>
                     <h4>Ceo &amp; Founder</h4>
                     <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                   </div>
@@ -297,10 +297,10 @@
                   <div class="testimonial-content">
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                      Saya sudah memesan ke Enyokitchenette ini berkali-kali dan selalu puas dengan makanan dan layanan yang diberikan.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
-                    <h3>Sara Wilsson</h3>
+                    <h3>Indah Kuswanti</h3>
                     <h4>Designer</h4>
                     <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                   </div>
@@ -320,10 +320,10 @@
                   <div class="testimonial-content">
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                      Pelayanan cepat dan ramah. Makanan yang saya pesan juga terasa sangat lezat dan harganya terjangkau.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
-                    <h3>Jena Karlis</h3>
+                    <h3>Agnes Monstera</h3>
                     <h4>Store Owner</h4>
                     <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                   </div>
@@ -343,10 +343,10 @@
                   <div class="testimonial-content">
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                      Saya sangat menyukai menu-menu di Enyokitchenette dan pelayanannya luar biasa baik. Saya akan pasti kembali memesan lagi.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
-                    <h3>John Larson</h3>
+                    <h3>Jono Iswanto</h3>
                     <h4>Entrepreneur</h4>
                     <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                   </div>
